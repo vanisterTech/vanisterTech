@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Latest insights from Vanister Management — marketing, social, and growth">
+  <title>Blog — Vanister Management</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="theme-color" content="#0a2342">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="Vanister Management Home">
+        <span class="favicon-dot favicon-dot--from-file">.</span>
+        <span class="brand-name">Vanister Management</span>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
+      <nav id="primary-navigation" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="tips.html">Tips</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <h1>Insights & Thought Leadership</h1>
+        <p>Thoughtful articles on digital marketing, social strategy, and content that converts.</p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h2><a href="#">Scaling Brands in the Digital Age</a></h2>
+            <p>How to align creative and performance for sustainable growth.</p>
+          </article>
+
+          <article class="card">
+            <h2><a href="#">Social Media Strategy That Works</a></h2>
+            <p>Practical frameworks to build predictable social growth.</p>
+          </article>
+
+          <article class="card">
+            <h2><a href="#">Content Marketing Essentials</a></h2>
+            <p>Core principles for content that drives awareness and conversions.</p>
+          </article>
+        </div>
+
+        <div class="center" style="margin-top:1rem"><a href="contact.html" class="btn">Suggest a Topic</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Vanister Management. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      if(!btn) return;
+      btn.addEventListener('click', function(){
+        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('open');
+      });
+    })();
+  </script>
+</body>
+</html>

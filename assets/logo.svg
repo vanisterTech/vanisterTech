@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400" width="500" height="400">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e7a6b7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0b8c5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Chat bubbles section -->
+  <g transform="translate(80, 40)">
+    <!-- Left grey chat bubble -->
+    <rect x="0" y="30" width="110" height="85" rx="18" fill="#e8ecf1" opacity="0.8"/>
+    <!-- Dots in left bubble -->
+    <circle cx="30" cy="70" r="6" fill="#b8c5d6"/>
+    <circle cx="60" cy="70" r="6" fill="#b8c5d6"/>
+    <circle cx="90" cy="70" r="6" fill="#b8c5d6"/>
+    
+    <!-- Right pink chat bubble -->
+    <rect x="100" y="60" width="140" height="100" rx="18" fill="url(#grad1)"/>
+    <path d="M 95 120 L 100 130 L 100 120 Z" fill="url(#grad1)"/>
+    <!-- Thumbs up icon -->
+    <g transform="translate(145, 85)">
+      <path d="M 20 55 L 20 20 Q 20 10 30 10 L 42 10 Q 48 10 48 16 L 48 38 L 60 38 Q 66 38 66 44 L 60 62 Q 60 68 54 68 L 20 68 Z" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
+    </g>
+  </g>
+  
+  <!-- Brand text -->
+  <text x="250" y="300" font-family="'Georgia', serif" font-size="80" font-weight="300" fill="#3d4a5c" text-anchor="middle" letter-spacing="3">VANISTER</text>
+  <text x="250" y="355" font-family="'Segoe UI', Arial" font-size="20" fill="#8a95a8" text-anchor="middle" letter-spacing="2" font-weight="500">SOCIAL MEDIA MANAGEMENT</text>
+</svg>

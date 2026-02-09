@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Thank you for contacting Vanister Management">
+  <title>Thanks — Vanister Management</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="Vanister Management Home">
+        <span class="favicon-dot favicon-dot--from-file">.</span>
+        <span class="brand-name">Vanister Management</span>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
+      <nav id="primary-navigation" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="tips.html">Tips</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container center">
+        <h1>Thanks — we received your message</h1>
+        <p>We'll review your message and respond shortly.</p>
+        <div id="details" class="card" style="margin-top:1rem"></div>
+        <p style="margin-top:1rem"><a href="index.html" class="btn">Back to Home</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Vanister Management. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Read query params and show submitted details (works when form uses GET)
+    (function(){
+      const params = new URLSearchParams(location.search);
+      const details = document.getElementById('details');
+      const name = params.get('name');
+      const email = params.get('email');
+      const message = params.get('message');
+      if(name || email || message){
+        details.innerHTML = '<h2>Submission details</h2>' +
+          (name? '<p><strong>Name:</strong> '+escapeHtml(name)+'</p>':'') +
+          (email? '<p><strong>Email:</strong> '+escapeHtml(email)+'</p>':'') +
+          (message? '<p><strong>Message:</strong><br>'+escapeHtml(message)+'</p>':'');
+      }
+      function escapeHtml(str){
+        return String(str).replace(/[&<>\"']/g, function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[m];});
+      }
+    })();
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      if(!btn) return;
+      btn.addEventListener('click', function(){
+        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('open');
+      });
+    })();
+  </script>
+</body>
+</html>

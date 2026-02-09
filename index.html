@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Vanister Management – Digital & Social Media Marketing Agency">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a2342">
+  <title>Vanister Management | Digital & Social Media Marketing Agency</title>
+  <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="Vanister Management Home">
+        <span class="favicon-dot favicon-dot--from-file">.</span>
+        <span class="brand-name">Vanister Management</span>
+      </a>
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false">Menu</button>
+      <nav id="primary-navigation" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="tips.html">Tips</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <h1 id="hero-heading">We Build Brands That Win Online</h1>
+        <p>Strategic digital marketing, social media growth, and premium brand positioning.</p>
+        <a href="contact.html" class="btn">Work With Us</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>Who We Are</h2>
+          <p>Vanister Management is a results-driven digital and social media marketing agency helping brands grow visibility, influence, and revenue.</p>
+        </div>
+        <aside class="card" aria-labelledby="card-heading">
+          <h3 id="card-heading">Premium. Strategic. Consistent.</h3>
+          <p>We combine creativity with data-backed strategies.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="center">Our Services</h2>
+        <div class="grid-3">
+          <article class="card">Social Media Management</article>
+          <article class="card">Digital Marketing</article>
+          <article class="card">Branding &amp; Content</article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="center">Why Choose Vanister</h2>
+        <div class="grid-3">
+          <div class="card">Data-Driven Strategy</div>
+          <div class="card">Creative Excellence</div>
+          <div class="card">Growth-Focused Execution</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="center">Latest Insights</h2>
+        <div class="grid-3">
+          <div class="card">How Brands Win on Social Media</div>
+          <div class="card">Content That Converts</div>
+          <div class="card">Digital Trends to Watch</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Ready to Scale Your Brand?</h2>
+      <a href="contact.html" class="btn">Get Started</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Vanister Management. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Small, unobtrusive script to toggle mobile nav
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      btn.addEventListener('click', function(){
+        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('open');
+      });
+    })();
+  </script>
+</body>
+</html>
